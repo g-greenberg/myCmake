@@ -192,7 +192,7 @@ endif()
 #                                                 #  (defaults to PROJECT_SOURCE_DIR)
 #     EXCLUDE "src/dir1/*" "src/dir2/*"           # Patterns to exclude (can be relative
 #                                                 #  to BASE_DIRECTORY, with CMake 3.4+)
-#     NO_DEMANGLE                                 # Don't demangle C++ symbols
+#    NO_DEMANGLE                                  # Don't demangle C++ symbols
 #                                                 #  even if c++filt is found
 # )
 function(setup_target_for_coverage_lcov)
@@ -436,3 +436,4 @@ function(append_coverage_compiler_flags)
     set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} ${COVERAGE_COMPILER_FLAGS}" PARENT_SCOPE)
     message(STATUS "Appending code coverage compiler flags: ${COVERAGE_COMPILER_FLAGS}")
 endfunction() # append_coverage_compiler_flags
+
