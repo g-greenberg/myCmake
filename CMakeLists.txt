@@ -34,9 +34,11 @@ include(StaticAnalyzers)
 include(LTO)
 include(Ccache)
 
+
 if (ENABLE_TESTING)
     include(CTest)
-    endif()
+endif()
+
 if (ENABLE_COVERAGE)
     include(CodeCoverage)
     append_coverage_compiler_flags()
