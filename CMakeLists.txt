@@ -8,7 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED     ON)
 set(CMAKE_CXX_EXTENSIONS            OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS   ON)
 
-
 # Options
 option(USE_CONAN            "Whether to use conan or vcpkg"         ON)
 option(ENABLE_WARNINGS      "Enable to add warnings to a target."   ON)
@@ -19,13 +18,11 @@ option(ENABLE_CPPCHECK      "Enable to add cppcheck."               OFF)
 option(ENABLE_LTO           "Enable to add Link Time Optimization." OFF)
 option(ENABLE_CCACHE        "Enable to add Ccache."                 OFF)
 
-
 # Project/Library Names
 set(LIBRARY_NAME    "lib")
 set(EXECUTABLE_NAME "main")
 
 ### CMAKE MODULES
-
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/)
 include(ConfigSafeGuards)
 include(Warnings)
@@ -48,6 +45,8 @@ endif()
 if (ENABLE_LTO)
     find_lto(CXX)
 endif()
+
+
 
 ### EXTERNAL LIBRARIES
 
